@@ -49,11 +49,17 @@ Task 2 - Test generateComputerMove
 
 The 'generateComputerMove' function should return a string value of either 'rock', 'paper' or 'scissors'. Write a test which shows 
 the function works as intended, and debug the function if the test fails.
-
 */
 
-/* 
+test(`calculateGameResults returns the correct string when playerMove is 'rock' and computerMove is 'scissors'`, () => {
+  let playerMove = "rock";
+  let computerMove = "scissors";
+  let actual = calculateGameResult(playerMove, computerMove);
+  let expected = `Player chose rock and computer chose scissors. Player wins.`;
+  expect(actual).toBe(expected);
+});
 
+/*
 Task 3 - Test incrementScore
 
 The 'incrementScore' function takes in the 'winner' of the game as its only argument. The 'winner' argument can either be a string
