@@ -54,4 +54,32 @@ test('When an array is longer than 10, return true ', () => {
   const expected = true;
 
    expect(actual).toBe(expected);
+});
+
+test('When an array and an item are provided, return the array with the item included in it.', () => {
+  const actual = addItemToArray([2, 4, 6, 8], 10);
+  const expected = [2, 4, 6, 8, 10];
+
+  expect(actual).toEqual(expected);
 })
+
+test('When the function takes in an object, a key and value, it should return an object with the key-value pair as one of its properties', () => {
+  const actual = addKeyValuePairToObject({job: "coder", age: 29}, "name", "Dave");
+  const expected = {job: "coder", age: 29, name: "Dave"};
+  expect(actual).toEqual(expected)
+
+})
+
+test('when an odd integer is passed in, the throwErrorIfEven function should return false.', () => {
+  const actual = throwErrorIfEven(3)
+  
+  expect(actual).toBeFalsy() 
+})
+
+// test('When an even integer is passed in, the throwErrorIfEven function should show an error message', () => {
+  
+//     const actual = throwErrorIfEven(4);
+//     // const expected = "Error, 4 is even!";
+//     expect(actual).toThrow('Error, 4 is even!');
+  
+// })
