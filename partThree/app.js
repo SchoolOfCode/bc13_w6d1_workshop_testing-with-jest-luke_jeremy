@@ -37,7 +37,7 @@ export function calculateGameResult(playerMove, computerMove) {
   }
   if (playerMove === 'scissors' && computerMove === 'paper') {
     incrementScore('player', currentScores);
-    return `Player chose paper and computer chose paper. Player wins.`;
+    return `Player chose scissors and computer chose paper. Player wins.`;
   }
   if (playerMove === 'scissors' && computerMove === 'rock') {
     incrementScore('draw', currentScores);
