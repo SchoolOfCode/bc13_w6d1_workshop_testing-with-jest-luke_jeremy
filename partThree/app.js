@@ -11,13 +11,13 @@ export function calculateGameResult(playerMove, computerMove) {
     incrementScore('draw', currentScores);
     return `Both players chose rock. It's a draw.`;
   }
-  if (playerMove === 'rock' && computerMove === '') {
+  if (playerMove === 'rock' && computerMove === 'paper') {
     incrementScore('computer', currentScores);
     return `Player chose rock and computer chose paper. Computer wins.`;
   }
-  if (playerMove === 'ROCK' && computerMove === 'scissors') {
+  if (playerMove === 'rock' && computerMove === 'scissors') {
     incrementScore('player', currentScores);
-    return `Player chose rock and computer chose paper. Player wins.`;
+    return `Player chose rock and computer chose scissors. Player wins.`;
   }
   if ((playerMove = 'paper' && computerMove === 'rock')) {
     incrementScore('player', currentScores);
@@ -37,7 +37,7 @@ export function calculateGameResult(playerMove, computerMove) {
   }
   if (playerMove === 'scissors' && computerMove === 'paper') {
     incrementScore('player', currentScores);
-    return `Player chose paper and computer chose paper. Player wins.`;
+    return `Player chose scissors and computer chose paper. Player wins.`;
   }
   if (playerMove === 'scissors' && computerMove === 'rock') {
     incrementScore('draw', currentScores);

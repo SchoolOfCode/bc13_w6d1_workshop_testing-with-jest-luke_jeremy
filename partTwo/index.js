@@ -3,6 +3,15 @@ the tests in index.test.js. */
 
 export function greetPerson(name) {
   //👉 2.1 - Write the code for this function based on what you see in the tests!
+  // take name
+  // create a string "Greetings, "
+  // add name to string
+  if (typeof name == "string"){
+return `Greetings, ${name}`;
+  }
+  else {
+    return "Please try again with a name!"
+  }
 }
 
 //👉 2.2 - Write tests for the functions below:
